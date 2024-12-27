@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const generateToken = require("../utils/generateToken");
+const { blacklistToken } = require("../utils/jwt");
 
 // 회원가입
 exports.register = async (req, res) => {
@@ -49,7 +50,21 @@ exports.login = async (req, res) => {
     // JWT 토큰 발급
     const token = generateToken(user._id);
 
-    res.status(200).json({ token, user: { id: user._id, name: user.name, email: user.email, role: user.role } });
+    res.status(200).json({
+      token,
+      user: { id: user._id, name: user.name, email: user.email, role: user.role },
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+// 로그아웃
+exports.logout = async (req, res) => {
+  try {
+    const token = req.token; // verifyToken 미들웨어에서 전달된 토큰
+    blacklistToken(token); // 토큰 블랙리스트에 추가
+    res.status(200).json({ message: "Logged out successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

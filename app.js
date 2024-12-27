@@ -1,23 +1,28 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const connectDB = require("./config/db");
-const authRoutes = require("./routes/authRoutes");
+require("dotenv").config(); // 환경 변수 로드
+const connectDB = require("./config/db"); // MongoDB 연결 함수
+const authRoutes = require("./routes/auth");
 
 const app = express();
-const PORT = 5000;
 
 // MongoDB 연결
 connectDB();
 
-// 미들웨어 설정
-app.use(cors());
+// 미들웨어
 app.use(bodyParser.json());
+app.use(cors());
 
-// 라우터 연결
+// 라우트
 app.use("/api/auth", authRoutes);
 
-// 서버 실행
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+// 전역 에러 핸들러
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: "Something went wrong!" });
 });
+
+// 서버 실행
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
