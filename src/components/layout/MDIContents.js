@@ -2,49 +2,76 @@ import React, { useState } from "react";
 import { Tabs, Tab, Box, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
-const MDIContents = () => {
-  const [tabs, setTabs] = useState([{ id: 0, label: "홈", content: "홈 화면" }]);
-  const [currentTab, setCurrentTab] = useState(0);
+const MDIContents = ({ activeMenu }) => {
+  const [tabs, setTabs] = useState([{ id: "home", label: "홈", content: "홈 콘텐츠" }]);
+  const [currentTab, setCurrentTab] = useState("home");
 
-  const addTab = (menu) => {
-    const existingTab = tabs.find((tab) => tab.id === menu.menuId);
-    if (!existingTab) {
-      const newTab = {
-        id: menu.menuId,
-        label: menu.menuNm,
-        content: menu.srcPath || `${menu.menuNm} 콘텐츠`,
-      };
-      setTabs([...tabs, newTab]);
-      setCurrentTab(tabs.length);
-    } else {
-      setCurrentTab(tabs.findIndex((tab) => tab.id === menu.menuId));
+  // 탭 추가
+  React.useEffect(() => {
+    if (activeMenu && !tabs.some((tab) => tab.id === activeMenu.menuId)) {
+      setTabs((prevTabs) => [
+        ...prevTabs,
+        {
+          id: activeMenu.menuId,
+          label: activeMenu.menuNm,
+          content: activeMenu.srcPath || `${activeMenu.menuNm} 콘텐츠`,
+        },
+      ]);
+      setCurrentTab(activeMenu.menuId);
     }
-  };
+  }, [activeMenu, tabs]);
 
+  // 탭 닫기
   const closeTab = (id) => {
-    const updatedTabs = tabs.filter((tab) => tab.id !== id);
-    setTabs(updatedTabs);
-    setCurrentTab(updatedTabs.length > 0 ? updatedTabs.length - 1 : 0);
+    const filteredTabs = tabs.filter((tab) => tab.id !== id);
+    setTabs(filteredTabs);
+
+    // 현재 탭이 닫혔다면, 다른 탭으로 이동
+    if (currentTab === id && filteredTabs.length > 0) {
+      setCurrentTab(filteredTabs[filteredTabs.length - 1].id);
+    } else if (filteredTabs.length === 0) {
+      setCurrentTab("home");
+    }
   };
 
   return (
     <Box sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
-      <Tabs value={currentTab} onChange={(e, newValue) => setCurrentTab(newValue)} variant="scrollable">
-        {tabs.map((tab, index) => (
+      {/* 탭 영역 */}
+      <Tabs
+        value={currentTab}
+        onChange={(e, newValue) => setCurrentTab(newValue)}
+        variant="scrollable"
+        scrollButtons="auto"
+      >
+        {tabs.map((tab) => (
           <Tab
             key={tab.id}
+            value={tab.id}
             label={
               <Box sx={{ display: "flex", alignItems: "center" }}>
                 {tab.label}
-                <IconButton size="small" onClick={() => closeTab(tab.id)}>
-                  <CloseIcon fontSize="small" />
-                </IconButton>
+                {tab.id !== "home" && (
+                  <IconButton
+                    size="small"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      closeTab(tab.id);
+                    }}
+                    sx={{ ml: 1 }}
+                  >
+                    <CloseIcon fontSize="small" />
+                  </IconButton>
+                )}
               </Box>
             }
           />
         ))}
       </Tabs>
-      <Box sx={{ p: 2 }}>{tabs[currentTab]?.content || "콘텐츠 없음"}</Box>
+
+      {/* 콘텐츠 영역 */}
+      <Box sx={{ p: 2 }}>
+        {tabs.find((tab) => tab.id === currentTab)?.content || "콘텐츠 없음"}
+      </Box>
     </Box>
   );
 };

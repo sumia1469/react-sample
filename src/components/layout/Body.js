@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid } from "@mui/material";
 import LNB from "./LNB";
 import MDIContents from "./MDIContents";
 
 const Body = () => {
+  const [activeMenu, setActiveMenu] = useState(null);
+
   const handleMenuClick = (menu) => {
-    console.log("Menu clicked:", menu);
+    setActiveMenu(menu);
   };
 
   return (
@@ -14,7 +16,7 @@ const Body = () => {
         <LNB onMenuClick={handleMenuClick} />
       </Grid>
       <Grid item xs>
-        <MDIContents />
+        <MDIContents activeMenu={activeMenu} />
       </Grid>
     </Grid>
   );
