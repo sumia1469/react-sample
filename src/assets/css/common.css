@@ -1,0 +1,39 @@
+.wrap{ min-width: 1200px; height: 100vh; }
+.wrap .container{ width: 100%; display: flex; }
+
+.wrap .container .left_area{ width: 200px; min-height: 100vh; border-right:1px solid #dde0eb; box-sizing: border-box;}
+.wrap .container .right_area { width: 100% ; box-sizing: border-box;}
+
+
+.lnb { width: inherit;  }
+.lnb .logo img{
+    display: block; margin: 40px auto;
+}
+
+.lnb .menus {padding:0 25px 0 25px;}
+.lnb .menus .tit{
+    font-size: 18px;
+    font-weight: 700;
+    color: #2d2d2d;
+    letter-spacing: -.18px;
+    margin-top: 40px;
+    padding-bottom: 10px; border-bottom: 2px solid #434855;
+}
+.lnb .menus li {
+    position: relative; border-bottom: 1px solid #e1e3e9; min-height: 37px;
+}
+
+.lnb .menus li a {
+    display: block; font-weight: 400;  padding:8px 0;  box-sizing: border-box; font-size: 13px; color: #7c7e89; letter-spacing: -.13px; line-height: 19px; padding-right:18px;
+}
+
+.lnb .menus li.on a {font-weight: 800; color: #2d2d2d;}
+
+.top_area { width: inherit; height: 45px;background-color: #3d3d3d;}
+.top_area .menus { margin: 0 30px}
+.top_area .menus ul { display: flex; justify-content: space-between;}
+.top_area .menus ul li a{display: block; font-size: 15px; height:45px; line-height: 45px; font-weight: 700; color: rgba(199, 210, 237, 0.8);}
+.top_area .menus ul li.on a{color: #fff}
+
+.contents_area { position: relative; width: inherit; box-sizing: border-box }
+.contents_area .contents { min-height: 600px; margin: 30px; }
