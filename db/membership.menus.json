@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "676e69022f86d4f6611c9246"
+  },
+  "menuId": "001000000",
+  "menuNm": "업무화면",
+  "menuLvl": 1,
+  "outptSeq": 1,
+  "pgmId": "",
+  "useYn": "Y",
+  "topMenuId": "000000000",
+  "srcPath": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676e69182f86d4f6611c9248"
+  },
+  "menuId": "001001000",
+  "menuNm": "시스템",
+  "menuLvl": 2,
+  "outptSeq": 1,
+  "pgmId": "",
+  "useYn": "Y",
+  "topMenuId": "001000000",
+  "srcPath": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676e691d2f86d4f6611c924a"
+  },
+  "menuId": "001001001",
+  "menuNm": "코드관리",
+  "menuLvl": 3,
+  "outptSeq": 1,
+  "pgmId": "BM001M01",
+  "useYn": "Y",
+  "topMenuId": "001001000",
+  "srcPath": "/ui/BM/BM001M01.xml",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676e692d2f86d4f6611c924c"
+  },
+  "menuId": "001001002",
+  "menuNm": "권한관리",
+  "menuLvl": 3,
+  "outptSeq": 2,
+  "pgmId": "BM002M01",
+  "useYn": "Y",
+  "topMenuId": "001001000",
+  "srcPath": "/ui/BM/BM002M01.xml",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676e69362f86d4f6611c924e"
+  },
+  "menuId": "001001003",
+  "menuNm": "프로그램관리",
+  "menuLvl": 3,
+  "outptSeq": 1,
+  "pgmId": "BM003M01",
+  "useYn": "Y",
+  "topMenuId": "001001000",
+  "srcPath": "/ui/BM/BM003M01.xml",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676e693e2f86d4f6611c9250"
+  },
+  "menuId": "001001004",
+  "menuNm": "메뉴관리",
+  "menuLvl": 3,
+  "outptSeq": 1,
+  "pgmId": "BM004M01",
+  "useYn": "Y",
+  "topMenuId": "001001000",
+  "srcPath": "/ui/BM/BM004M01.xml",
+  "__v": 0
+}]

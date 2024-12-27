@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "676e012dd0881fb67551c44d"
+  },
+  "name": "이병현",
+  "email": "sumia2@naver.com",
+  "password": "$2b$10$aQjBOOYCoQQSGuiPGEDDruB5czdrvhRD8yY6djny/K2O0zUfOxfYS",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-12-27T01:21:49.467Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676e0141d0881fb67551c450"
+  },
+  "name": "홍길동",
+  "email": "hong@naver.com",
+  "password": "$2b$10$unhbUoCycoPdWKIwyrgj3e5iI2zibjSkT0XQnslyM9XQjqpeEdsLK",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-12-27T01:22:09.579Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676e08cdcfad5409d46aa84f"
+  },
+  "name": "김수지",
+  "email": "su@naver.com",
+  "password": "$2b$10$ZfJDfkeuThvllIeElEHh6OKx/Gj1Rj0LzjDot5zZTDR8uIsyb4yiW",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-12-27T01:54:21.920Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676e3dc665332af9ab4b14ce"
+  },
+  "name": "이병현",
+  "email": "sumia@naver.com",
+  "password": "$2b$10$9iXp9Q9DlDonQ2bYN059/.Iycxi7.FaKfbUj18C5ptqZvgzz.h9lG",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-12-27T05:40:22.483Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676e49bd29e0c6b955af5122"
+  },
+  "name": "이병현3",
+  "email": "sumia3@naver.com",
+  "password": "$2b$10$uG.Snjo7USpOmCkmpdNs2OB8lBcARWmmtmtxUa1HijHMnFWOqhWXu",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-12-27T06:31:25.480Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676e536b51d111f0b59e8891"
+  },
+  "name": "이병현",
+  "email": "admin@naver.com",
+  "password": "$2b$10$Oh1ifLVL3yMCB8n7HV1kVegBCCle.1VdldIOKAWJuImJLgxnQBciK",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-12-27T07:12:43.728Z"
+  },
+  "__v": 0
+}]
