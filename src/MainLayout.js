@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Header from "./components/layout/Header";
@@ -11,7 +11,6 @@ const MainLayout = () => {
 
   const handleLogout = async () => {
     try {
-      // 백엔드로 로그아웃 요청
       const token = localStorage.getItem("token");
       await axios.post(
         "http://localhost:5000/api/auth/logout",
@@ -23,14 +22,10 @@ const MainLayout = () => {
         }
       );
 
-      // 토큰 삭제
       localStorage.removeItem("token");
-
-      // 로그인 화면으로 이동
       navigate("/login");
     } catch (error) {
       console.error("로그아웃 처리 중 오류:", error);
-      // 로그아웃 실패 시에도 클라이언트 토큰을 제거하고 리디렉션
       localStorage.removeItem("token");
       navigate("/login");
     }
@@ -41,8 +36,8 @@ const MainLayout = () => {
       {/* Header */}
       <Header onLogout={handleLogout} />
 
-      {/* Body */}
-      <Box sx={{ flexGrow: 1 }}>
+      {/* Body: Header 아래에 LNB와 MDI 배치 */}
+      <Box sx={{ flexGrow: 1, display: "flex", overflow: "hidden" }}>
         <Body />
       </Box>
 
