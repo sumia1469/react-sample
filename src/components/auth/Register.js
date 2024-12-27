@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TextField, Button, Box, Typography, Container, Grid } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Register = () => {
@@ -17,9 +17,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", formData);
-
-      // 성공 메시지 표시 후 로그인 페이지로 이동
+      await axios.post("http://localhost:5000/api/auth/register", formData);
       setSuccess("회원가입이 성공적으로 완료되었습니다.");
       setTimeout(() => {
         navigate("/login");
@@ -77,18 +75,13 @@ const Register = () => {
           />
           {error && <Typography color="error">{error}</Typography>}
           {success && <Typography color="primary">{success}</Typography>}
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-          >
+          <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
             회원가입
           </Button>
           <Grid container>
             <Grid item>
               <Typography variant="body2">
-                이미 계정이 있으신가요? <a href="/login">로그인</a>
+                이미 계정이 있으신가요? <Link to="/login">로그인</Link>
               </Typography>
             </Grid>
           </Grid>

@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 
 const Navbar = () => {
   return (
-    <nav>
-      <Link to="/register">Register</Link> | <Link to="/login">Login</Link>
-    </nav>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6">My Application</Typography>
+      </Toolbar>
+    </AppBar>
   );
 };
 

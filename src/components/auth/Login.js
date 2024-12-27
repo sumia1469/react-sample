@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TextField, Button, Box, Typography, Container, Grid } from "@mui/material";
-import { useNavigate, Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
@@ -17,11 +17,7 @@ const Login = () => {
 
     try {
       const response = await axios.post("http://localhost:5000/api/auth/login", formData);
-
-      // JWT 토큰 저장
       localStorage.setItem("token", response.data.token);
-
-      // 메인 화면으로 이동
       navigate("/main");
     } catch (err) {
       setError(err.response?.data?.message || "로그인에 실패했습니다.");
@@ -65,21 +61,13 @@ const Login = () => {
             onChange={handleChange}
           />
           {error && <Typography color="error">{error}</Typography>}
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-          >
+          <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
             로그인
           </Button>
           <Grid container>
             <Grid item>
               <Typography variant="body2">
-                계정이 없으신가요?{" "}
-                <Link to="/register" style={{ textDecoration: "none", color: "#1976d2" }}>
-                  회원가입
-                </Link>
+                계정이 없으신가요? <Link to="/register">회원가입</Link>
               </Typography>
             </Grid>
           </Grid>
