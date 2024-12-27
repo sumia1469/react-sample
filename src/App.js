@@ -1,19 +1,20 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Register from "./components/Register";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Login from "./components/Login";
+import Register from "./components/Register";
+import Main from "./components/Main";
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/register" element={<Register />} />
+        {/* 초기 화면: 로그인 */}
+        <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/main" element={<Main />} />
       </Routes>
     </Router>
   );
-}
-
+};
 export default App;
