@@ -47,7 +47,7 @@ const LNB = ({ onMenuClick }) => {
       sx={{
         width: 240,
         flexShrink: 0,
-        [`& .MuiDrawer-paper`]: { width: 240, boxSizing: "border-box" },
+        [`& .MuiDrawer-paper`]: { width: 240, boxSizing: "border-box" , top:"64px"},
       }}
     >
       <List>{renderMenu(menus)}</List>
