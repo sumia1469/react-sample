@@ -5,6 +5,7 @@ require("dotenv").config(); // 환경 변수 로드
 const connectDB = require("./config/db"); // MongoDB 연결 함수
 const authRoutes = require("./routes/auth");
 const menuRoutes = require("./routes/menu"); // 메뉴 라우트
+const bmCodeRoutes = require('./routes/bmCode');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(cors());
 // 라우트
 app.use("/api/auth", authRoutes);
 app.use("/api/menu", menuRoutes);
+app.use('/api', bmCodeRoutes);
 
 // 전역 에러 핸들러
 app.use((err, req, res, next) => {

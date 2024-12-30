@@ -1,0 +1,1750 @@
+[{
+  "_id": {
+    "$oid": "67724b43c648982cedc03447"
+  },
+  "grp_cd": "00001",
+  "com_cd": "01",
+  "code_nm": "임원",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03448"
+  },
+  "grp_cd": "00001",
+  "com_cd": "02",
+  "code_nm": "팀장",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03449"
+  },
+  "grp_cd": "00001",
+  "com_cd": "03",
+  "code_nm": "팀원",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0344a"
+  },
+  "grp_cd": "00001",
+  "com_cd": "04",
+  "code_nm": "협력",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0344b"
+  },
+  "grp_cd": "00002",
+  "com_cd": "01",
+  "code_nm": "대표이사",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0344c"
+  },
+  "grp_cd": "00002",
+  "com_cd": "02",
+  "code_nm": "이사",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0344d"
+  },
+  "grp_cd": "00002",
+  "com_cd": "03",
+  "code_nm": "팀장",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0344e"
+  },
+  "grp_cd": "00002",
+  "com_cd": "04",
+  "code_nm": "차장",
+  "sort_order": 5,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0344f"
+  },
+  "grp_cd": "00002",
+  "com_cd": "05",
+  "code_nm": "과장",
+  "sort_order": 6,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03450"
+  },
+  "grp_cd": "00002",
+  "com_cd": "06",
+  "code_nm": "대리",
+  "sort_order": 7,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03451"
+  },
+  "grp_cd": "00002",
+  "com_cd": "07",
+  "code_nm": "사원",
+  "sort_order": 8,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03452"
+  },
+  "grp_cd": "00002",
+  "com_cd": "08",
+  "code_nm": "부장",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03453"
+  },
+  "grp_cd": "00003",
+  "com_cd": "01",
+  "code_nm": "관리자",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03454"
+  },
+  "grp_cd": "00003",
+  "com_cd": "02",
+  "code_nm": "일반사용자",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03455"
+  },
+  "grp_cd": "00003",
+  "com_cd": "03",
+  "code_nm": "협력업체직원",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03456"
+  },
+  "grp_cd": "00004",
+  "com_cd": "01",
+  "code_nm": "기독교",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03457"
+  },
+  "grp_cd": "00004",
+  "com_cd": "02",
+  "code_nm": "천주교",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03458"
+  },
+  "grp_cd": "00004",
+  "com_cd": "03",
+  "code_nm": "불교",
+  "sort_order": 8,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03459"
+  },
+  "grp_cd": "00004",
+  "com_cd": "04",
+  "code_nm": "기타",
+  "sort_order": 9,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0345a"
+  },
+  "grp_cd": "00005",
+  "com_cd": "01",
+  "code_nm": "중졸이하",
+  "sort_order": 10,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0345b"
+  },
+  "grp_cd": "00005",
+  "com_cd": "02",
+  "code_nm": "고졸",
+  "sort_order": 11,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0345c"
+  },
+  "grp_cd": "00005",
+  "com_cd": "03",
+  "code_nm": "대졸",
+  "sort_order": 12,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0345d"
+  },
+  "grp_cd": "00005",
+  "com_cd": "04",
+  "code_nm": "대졸이상",
+  "sort_order": 13,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0345e"
+  },
+  "grp_cd": "00006",
+  "com_cd": "01",
+  "code_nm": "연장",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc0345f"
+  },
+  "grp_cd": "00006",
+  "com_cd": "02",
+  "code_nm": "철야",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724b43c648982cedc03460"
+  },
+  "grp_cd": "00006",
+  "com_cd": "03",
+  "code_nm": "휴일근무",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03466"
+  },
+  "grp_cd": "00007",
+  "com_cd": "01",
+  "code_nm": "신청중",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03467"
+  },
+  "grp_cd": "00007",
+  "com_cd": "02",
+  "code_nm": "신청완료",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03468"
+  },
+  "grp_cd": "00007",
+  "com_cd": "03",
+  "code_nm": "보고중",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03469"
+  },
+  "grp_cd": "00007",
+  "com_cd": "04",
+  "code_nm": "보고완료",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc0346a"
+  },
+  "grp_cd": "00007",
+  "com_cd": "05",
+  "code_nm": "반려",
+  "sort_order": 5,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc0346b"
+  },
+  "grp_cd": "00011",
+  "com_cd": "01",
+  "code_nm": "프리(3.3)",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc0346c"
+  },
+  "grp_cd": "00011",
+  "com_cd": "02",
+  "code_nm": "중급",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc0346d"
+  },
+  "grp_cd": "00011",
+  "com_cd": "03",
+  "code_nm": "협력업체",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc0346e"
+  },
+  "grp_cd": "00012",
+  "com_cd": "10",
+  "code_nm": "초급",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc0346f"
+  },
+  "grp_cd": "00012",
+  "com_cd": "20",
+  "code_nm": "중급",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03470"
+  },
+  "grp_cd": "00012",
+  "com_cd": "30",
+  "code_nm": "고급",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03471"
+  },
+  "grp_cd": "00012",
+  "com_cd": "40",
+  "code_nm": "특급",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03472"
+  },
+  "grp_cd": "00013",
+  "com_cd": "10",
+  "code_nm": "고졸",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03473"
+  },
+  "grp_cd": "00013",
+  "com_cd": "20",
+  "code_nm": "전문대졸",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03474"
+  },
+  "grp_cd": "00013",
+  "com_cd": "30",
+  "code_nm": "대학교졸",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03475"
+  },
+  "grp_cd": "00013",
+  "com_cd": "40",
+  "code_nm": "대학원졸",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03476"
+  },
+  "grp_cd": "00013",
+  "com_cd": "50",
+  "code_nm": "박사",
+  "sort_order": 5,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03477"
+  },
+  "grp_cd": "00014",
+  "com_cd": "01",
+  "code_nm": "정보처리기능사",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03478"
+  },
+  "grp_cd": "00014",
+  "com_cd": "02",
+  "code_nm": "정보처리기사",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc03479"
+  },
+  "grp_cd": "00014",
+  "com_cd": "03",
+  "code_nm": "SCJP",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc0347a"
+  },
+  "grp_cd": "00014",
+  "com_cd": "04",
+  "code_nm": "OCP",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc0347b"
+  },
+  "grp_cd": "00014",
+  "com_cd": "05",
+  "code_nm": "PMP",
+  "sort_order": 5,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724defc648982cedc0347c"
+  },
+  "grp_cd": "00014",
+  "com_cd": "06",
+  "code_nm": "DAP",
+  "sort_order": 6,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0347f"
+  },
+  "grp_cd": "00015",
+  "com_cd": "01",
+  "code_nm": "Proworks",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03480"
+  },
+  "grp_cd": "00015",
+  "com_cd": "02",
+  "code_nm": "WebSquare",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03481"
+  },
+  "grp_cd": "00015",
+  "com_cd": "03",
+  "code_nm": "Oracle",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03482"
+  },
+  "grp_cd": "00015",
+  "com_cd": "04",
+  "code_nm": "Sysbase",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03483"
+  },
+  "grp_cd": "00015",
+  "com_cd": "05",
+  "code_nm": "JEUS",
+  "sort_order": 5,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03484"
+  },
+  "grp_cd": "00015",
+  "com_cd": "06",
+  "code_nm": "WebLogic",
+  "sort_order": 6,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03485"
+  },
+  "grp_cd": "00015",
+  "com_cd": "07",
+  "code_nm": "Java",
+  "sort_order": 7,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03486"
+  },
+  "grp_cd": "00015",
+  "com_cd": "08",
+  "code_nm": "JavaScript",
+  "sort_order": 8,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03487"
+  },
+  "grp_cd": "00016",
+  "com_cd": "01",
+  "code_nm": "금융(은행)",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03488"
+  },
+  "grp_cd": "00016",
+  "com_cd": "02",
+  "code_nm": "금융(손.생보)",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03489"
+  },
+  "grp_cd": "00016",
+  "com_cd": "03",
+  "code_nm": "금융(기타)",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0348a"
+  },
+  "grp_cd": "00016",
+  "com_cd": "04",
+  "code_nm": "공공",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0348b"
+  },
+  "grp_cd": "00016",
+  "com_cd": "06",
+  "code_nm": "제조",
+  "sort_order": 6,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0348c"
+  },
+  "grp_cd": "00016",
+  "com_cd": "07",
+  "code_nm": "일반",
+  "sort_order": 7,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0348d"
+  },
+  "grp_cd": "00017",
+  "com_cd": "10",
+  "code_nm": "SI",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0348e"
+  },
+  "grp_cd": "00017",
+  "com_cd": "20",
+  "code_nm": "SM",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0348f"
+  },
+  "grp_cd": "00017",
+  "com_cd": "30",
+  "code_nm": "SW",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03490"
+  },
+  "grp_cd": "00018",
+  "com_cd": "00",
+  "code_nm": "의견없음",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03491"
+  },
+  "grp_cd": "00018",
+  "com_cd": "01",
+  "code_nm": "재계약추천",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03492"
+  },
+  "grp_cd": "00018",
+  "com_cd": "02",
+  "code_nm": "재계약추천안함",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03493"
+  },
+  "grp_cd": "00018",
+  "com_cd": "03",
+  "code_nm": "의견보류",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03494"
+  },
+  "grp_cd": "00019",
+  "com_cd": "01",
+  "code_nm": "PM",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03495"
+  },
+  "grp_cd": "00019",
+  "com_cd": "02",
+  "code_nm": "PL",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03496"
+  },
+  "grp_cd": "00019",
+  "com_cd": "03",
+  "code_nm": "분석/설계",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03497"
+  },
+  "grp_cd": "00019",
+  "com_cd": "04",
+  "code_nm": "개발",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03498"
+  },
+  "grp_cd": "00019",
+  "com_cd": "05",
+  "code_nm": "퍼블리셔",
+  "sort_order": 5,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc03499"
+  },
+  "grp_cd": "00019",
+  "com_cd": "06",
+  "code_nm": "컨설팅",
+  "sort_order": 6,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0349a"
+  },
+  "grp_cd": "00020",
+  "com_cd": "01",
+  "code_nm": "경영파트",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0349b"
+  },
+  "grp_cd": "00020",
+  "com_cd": "02",
+  "code_nm": "영업파트",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0349c"
+  },
+  "grp_cd": "00020",
+  "com_cd": "03",
+  "code_nm": "연구파트",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0349d"
+  },
+  "grp_cd": "00020",
+  "com_cd": "04",
+  "code_nm": "사업파트",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724e51c648982cedc0349e"
+  },
+  "grp_cd": "00020",
+  "com_cd": "05",
+  "code_nm": "테스트파트",
+  "sort_order": 5,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034a0"
+  },
+  "grp_cd": "00021",
+  "com_cd": "01",
+  "code_nm": "신입",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034a1"
+  },
+  "grp_cd": "00021",
+  "com_cd": "02",
+  "code_nm": "경력",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034a2"
+  },
+  "grp_cd": "00022",
+  "com_cd": "01",
+  "code_nm": "자가",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034a3"
+  },
+  "grp_cd": "00022",
+  "com_cd": "02",
+  "code_nm": "전세",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034a4"
+  },
+  "grp_cd": "00022",
+  "com_cd": "03",
+  "code_nm": "월세",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034a5"
+  },
+  "grp_cd": "00022",
+  "com_cd": "04",
+  "code_nm": "기타",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034a6"
+  },
+  "grp_cd": "00023",
+  "com_cd": "01",
+  "code_nm": "기획",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034a7"
+  },
+  "grp_cd": "00023",
+  "com_cd": "02",
+  "code_nm": "컨설팅",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034a8"
+  },
+  "grp_cd": "00023",
+  "com_cd": "03",
+  "code_nm": "감리",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034a9"
+  },
+  "grp_cd": "00023",
+  "com_cd": "04",
+  "code_nm": "프로젝트 관리 및 지원",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034aa"
+  },
+  "grp_cd": "00023",
+  "com_cd": "05",
+  "code_nm": "영업 및 마케팅",
+  "sort_order": 5,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034ab"
+  },
+  "grp_cd": "00023",
+  "com_cd": "06",
+  "code_nm": "시스템 개발",
+  "sort_order": 6,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034ac"
+  },
+  "grp_cd": "00023",
+  "com_cd": "07",
+  "code_nm": "웹 및 콘텐츠 개발",
+  "sort_order": 7,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034ad"
+  },
+  "grp_cd": "00024",
+  "com_cd": "01",
+  "code_nm": "전략 및 계획 수립",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "01",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034ae"
+  },
+  "grp_cd": "00024",
+  "com_cd": "02",
+  "code_nm": "IT 컨설팅",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "02",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034af"
+  },
+  "grp_cd": "00024",
+  "com_cd": "03",
+  "code_nm": "BT 컨설팅",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "02",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034b0"
+  },
+  "grp_cd": "00024",
+  "com_cd": "04",
+  "code_nm": "솔루션 컨설팅",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "02",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034b1"
+  },
+  "grp_cd": "00024",
+  "com_cd": "05",
+  "code_nm": "SI 감리",
+  "sort_order": 5,
+  "is_use": "Y",
+  "attr_value1": "03",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034b2"
+  },
+  "grp_cd": "00024",
+  "com_cd": "06",
+  "code_nm": "프로젝트 관리",
+  "sort_order": 6,
+  "is_use": "Y",
+  "attr_value1": "04",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034b3"
+  },
+  "grp_cd": "00024",
+  "com_cd": "07",
+  "code_nm": "품질관리",
+  "sort_order": 7,
+  "is_use": "Y",
+  "attr_value1": "04",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034b4"
+  },
+  "grp_cd": "00024",
+  "com_cd": "08",
+  "code_nm": "SI 영업",
+  "sort_order": 8,
+  "is_use": "Y",
+  "attr_value1": "05",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034b5"
+  },
+  "grp_cd": "00024",
+  "com_cd": "09",
+  "code_nm": "솔루션 영업",
+  "sort_order": 9,
+  "is_use": "Y",
+  "attr_value1": "05",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034b6"
+  },
+  "grp_cd": "00024",
+  "com_cd": "10",
+  "code_nm": "시스템 영업",
+  "sort_order": 10,
+  "is_use": "Y",
+  "attr_value1": "05",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034b7"
+  },
+  "grp_cd": "00024",
+  "com_cd": "11",
+  "code_nm": "마케팅 관리",
+  "sort_order": 11,
+  "is_use": "Y",
+  "attr_value1": "05",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034b8"
+  },
+  "grp_cd": "00024",
+  "com_cd": "12",
+  "code_nm": "시스템 S/W",
+  "sort_order": 12,
+  "is_use": "Y",
+  "attr_value1": "06",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034b9"
+  },
+  "grp_cd": "00024",
+  "com_cd": "13",
+  "code_nm": "패키지 S/W",
+  "sort_order": 13,
+  "is_use": "Y",
+  "attr_value1": "06",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034ba"
+  },
+  "grp_cd": "00024",
+  "com_cd": "14",
+  "code_nm": "응용 S/W",
+  "sort_order": 14,
+  "is_use": "Y",
+  "attr_value1": "06",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034bb"
+  },
+  "grp_cd": "00024",
+  "com_cd": "15",
+  "code_nm": "통신 S/W",
+  "sort_order": 15,
+  "is_use": "Y",
+  "attr_value1": "06",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034bc"
+  },
+  "grp_cd": "00024",
+  "com_cd": "16",
+  "code_nm": "임베디드 S/W",
+  "sort_order": 16,
+  "is_use": "Y",
+  "attr_value1": "06",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034bd"
+  },
+  "grp_cd": "00024",
+  "com_cd": "17",
+  "code_nm": "데이터베이스",
+  "sort_order": 17,
+  "is_use": "Y",
+  "attr_value1": "06",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034be"
+  },
+  "grp_cd": "00024",
+  "com_cd": "18",
+  "code_nm": "웹 개발",
+  "sort_order": 18,
+  "is_use": "Y",
+  "attr_value1": "07",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034bf"
+  },
+  "grp_cd": "00024",
+  "com_cd": "19",
+  "code_nm": "게임 애니메이션",
+  "sort_order": 19,
+  "is_use": "Y",
+  "attr_value1": "07",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034c0"
+  },
+  "grp_cd": "00024",
+  "com_cd": "20",
+  "code_nm": "모바일 콘텐츠",
+  "sort_order": 20,
+  "is_use": "Y",
+  "attr_value1": "07",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034c1"
+  },
+  "grp_cd": "00024",
+  "com_cd": "21",
+  "code_nm": "웹 디자인",
+  "sort_order": 21,
+  "is_use": "Y",
+  "attr_value1": "07",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034c2"
+  },
+  "grp_cd": "00025",
+  "com_cd": "01",
+  "code_nm": "부",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034c3"
+  },
+  "grp_cd": "00025",
+  "com_cd": "02",
+  "code_nm": "모",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034c4"
+  },
+  "grp_cd": "00025",
+  "com_cd": "03",
+  "code_nm": "배우자",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034c5"
+  },
+  "grp_cd": "00025",
+  "com_cd": "04",
+  "code_nm": "자",
+  "sort_order": 4,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034c6"
+  },
+  "grp_cd": "00025",
+  "com_cd": "05",
+  "code_nm": "녀",
+  "sort_order": 5,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034c7"
+  },
+  "grp_cd": "00026",
+  "com_cd": "BM",
+  "code_nm": "시스템",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034c8"
+  },
+  "grp_cd": "00026",
+  "com_cd": "HM",
+  "code_nm": "인사",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034c9"
+  },
+  "grp_cd": "00026",
+  "com_cd": "SP",
+  "code_nm": "샘플화면",
+  "sort_order": 3,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034ca"
+  },
+  "grp_cd": "00027",
+  "com_cd": "en",
+  "code_nm": "영어",
+  "sort_order": 2,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+},
+{
+  "_id": {
+    "$oid": "67724eb9c648982cedc034cb"
+  },
+  "grp_cd": "00027",
+  "com_cd": "ko",
+  "code_nm": "한국어",
+  "sort_order": 1,
+  "is_use": "Y",
+  "attr_value1": "",
+  "attr_value2": "",
+  "attr_value3": "",
+  "note": ""
+}]

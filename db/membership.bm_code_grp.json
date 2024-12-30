@@ -1,0 +1,240 @@
+[{
+  "_id": {
+    "$oid": "67725026c648982cedc034e9"
+  },
+  "grp_cd": "00001",
+  "grp_nm": "직책",
+  "sort_order": 1,
+  "is_use": "Y",
+  "note": "직책"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034ea"
+  },
+  "grp_cd": "00002",
+  "grp_nm": "직위",
+  "sort_order": 2,
+  "is_use": "Y",
+  "note": "직위"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034eb"
+  },
+  "grp_cd": "00003",
+  "grp_nm": "직원구분",
+  "sort_order": 3,
+  "is_use": "Y",
+  "note": "직원구분"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034ec"
+  },
+  "grp_cd": "00004",
+  "grp_nm": "종교",
+  "sort_order": 4,
+  "is_use": "Y",
+  "note": "종교"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034ed"
+  },
+  "grp_cd": "00005",
+  "grp_nm": "최종학력",
+  "sort_order": 5,
+  "is_use": "Y",
+  "note": "최종학력"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034ee"
+  },
+  "grp_cd": "00006",
+  "grp_nm": "시간외근무",
+  "sort_order": 6,
+  "is_use": "Y",
+  "note": "시간외근무"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034ef"
+  },
+  "grp_cd": "00007",
+  "grp_nm": "시간외결재상태",
+  "sort_order": 7,
+  "is_use": "Y",
+  "note": "시간외결재상태"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034f0"
+  },
+  "grp_cd": "00011",
+  "grp_nm": "인력형태",
+  "sort_order": 9,
+  "is_use": "Y",
+  "note": "인력형태"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034f1"
+  },
+  "grp_cd": "00012",
+  "grp_nm": "기술등급",
+  "sort_order": 10,
+  "is_use": "Y",
+  "note": "기술등급"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034f2"
+  },
+  "grp_cd": "00013",
+  "grp_nm": "학위구분",
+  "sort_order": 11,
+  "is_use": "Y",
+  "note": "학위구분"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034f3"
+  },
+  "grp_cd": "00014",
+  "grp_nm": "자격증",
+  "sort_order": 12,
+  "is_use": "Y",
+  "note": "자격증"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034f4"
+  },
+  "grp_cd": "00015",
+  "grp_nm": "개발기술",
+  "sort_order": 13,
+  "is_use": "Y",
+  "note": "개발기술"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034f5"
+  },
+  "grp_cd": "00016",
+  "grp_nm": "산업분야",
+  "sort_order": 14,
+  "is_use": "Y",
+  "note": "산업분야"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034f6"
+  },
+  "grp_cd": "00017",
+  "grp_nm": "외주계약구분",
+  "sort_order": 15,
+  "is_use": "Y",
+  "note": "외주계약구분"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034f7"
+  },
+  "grp_cd": "00018",
+  "grp_nm": "계약종료평가",
+  "sort_order": 16,
+  "is_use": "Y",
+  "note": "계약종료평가"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034f8"
+  },
+  "grp_cd": "00019",
+  "grp_nm": "역할",
+  "sort_order": 17,
+  "is_use": "Y",
+  "note": "프로젝트역할"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034f9"
+  },
+  "grp_cd": "00020",
+  "grp_nm": "조직구분",
+  "sort_order": 18,
+  "is_use": "Y",
+  "note": "조직구분"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034fa"
+  },
+  "grp_cd": "00021",
+  "grp_nm": "입사구분",
+  "sort_order": 19,
+  "is_use": "Y",
+  "note": "입사구분"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034fb"
+  },
+  "grp_cd": "00022",
+  "grp_nm": "주거구분",
+  "sort_order": 20,
+  "is_use": "Y",
+  "note": "주거구분"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034fc"
+  },
+  "grp_cd": "00023",
+  "grp_nm": "직군",
+  "sort_order": 21,
+  "is_use": "Y",
+  "note": "직군"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034fd"
+  },
+  "grp_cd": "00024",
+  "grp_nm": "직무",
+  "sort_order": 22,
+  "is_use": "Y",
+  "note": "직무"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034fe"
+  },
+  "grp_cd": "00025",
+  "grp_nm": "가족관계",
+  "sort_order": 25,
+  "is_use": "Y",
+  "note": "가족관계"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc034ff"
+  },
+  "grp_cd": "00026",
+  "grp_nm": "프로그램그룹",
+  "sort_order": 26,
+  "is_use": "Y",
+  "note": "프로그램그룹"
+},
+{
+  "_id": {
+    "$oid": "67725026c648982cedc03500"
+  },
+  "grp_cd": "00027",
+  "grp_nm": "다국어 지원 언어",
+  "sort_order": 27,
+  "is_use": "Y",
+  "note": "다국어 지원 언어"
+}]
