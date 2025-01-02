@@ -21,7 +21,7 @@ const Register = () => {
       setSuccess("회원가입이 성공적으로 완료되었습니다.");
       setTimeout(() => {
         navigate("/login");
-      }, 2000);
+      }, 1000);
     } catch (err) {
       setError(err.response?.data?.message || "회원가입에 실패했습니다.");
     }
