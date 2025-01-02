@@ -1,0 +1,340 @@
+[{
+  "_id": {
+    "$oid": "6772585dc648982cedc03523"
+  },
+  "program_cd": "BM001M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03524"
+  },
+  "program_cd": "BM002M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03525"
+  },
+  "program_cd": "BM003M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03526"
+  },
+  "program_cd": "BM004M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03527"
+  },
+  "program_cd": "BM005M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03528"
+  },
+  "program_cd": "BM006M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03529"
+  },
+  "program_cd": "BM007M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0352a"
+  },
+  "program_cd": "BM008M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0352b"
+  },
+  "program_cd": "BM009M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0352c"
+  },
+  "program_cd": "HM001M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0352d"
+  },
+  "program_cd": "HM002M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0352e"
+  },
+  "program_cd": "HM003M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0352f"
+  },
+  "program_cd": "HM004M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03530"
+  },
+  "program_cd": "SP001M01",
+  "authority_cd": "10000",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03531"
+  },
+  "program_cd": "BM009M01",
+  "authority_cd": "10001",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03532"
+  },
+  "program_cd": "HM001M01",
+  "authority_cd": "10001",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03533"
+  },
+  "program_cd": "HM002M01",
+  "authority_cd": "10001",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03534"
+  },
+  "program_cd": "HM003M01",
+  "authority_cd": "10001",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03535"
+  },
+  "program_cd": "HM004M01",
+  "authority_cd": "10001",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03536"
+  },
+  "program_cd": "SP001M01",
+  "authority_cd": "10001",
+  "is_auth_select": "Y",
+  "is_auth_save": "Y",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03537"
+  },
+  "program_cd": "BM001M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03538"
+  },
+  "program_cd": "BM002M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03539"
+  },
+  "program_cd": "BM003M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0353a"
+  },
+  "program_cd": "BM004M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0353b"
+  },
+  "program_cd": "BM005M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0353c"
+  },
+  "program_cd": "BM006M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0353d"
+  },
+  "program_cd": "BM007M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0353e"
+  },
+  "program_cd": "BM008M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc0353f"
+  },
+  "program_cd": "BM009M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": ""
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03540"
+  },
+  "program_cd": "HM001M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03541"
+  },
+  "program_cd": "HM002M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03542"
+  },
+  "program_cd": "HM003M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03543"
+  },
+  "program_cd": "HM004M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+},
+{
+  "_id": {
+    "$oid": "6772585dc648982cedc03544"
+  },
+  "program_cd": "SP001M01",
+  "authority_cd": "10002",
+  "is_auth_select": "Y",
+  "is_auth_save": "",
+  "is_auth_excel": "Y"
+}]
