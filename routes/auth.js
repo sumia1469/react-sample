@@ -12,4 +12,7 @@ router.post("/login", authController.login);
 // 로그아웃
 router.post("/logout", verifyToken, authController.logout);
 
+// 로그인 인증
+router.get('/checkAuth', verifyToken, authController.checkAuth);
+
 module.exports = router;

@@ -14,11 +14,17 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", formData);
-      localStorage.setItem("token", response.data.token);
-      navigate("/main");
+      const response = await axios.post("http://localhost:5000/api/auth/login", formData, {
+        withCredentials: true, // 쿠키 전송 허용
+      });
+      // 로그인 성공
+      if (response.status === 200) {
+        console.log("Login successful, navigating to /main");
+        navigate("/main");
+      } else {
+        console.error("Unexpected response status:", response.status);
+      }
     } catch (err) {
       setError(err.response?.data?.message || "로그인에 실패했습니다.");
     }

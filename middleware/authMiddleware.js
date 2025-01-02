@@ -1,21 +1,22 @@
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
-const verifyToken = (req, res, next) => {
-  const authHeader = req.headers.authorization;
+exports.verifyToken = (req, res, next) => {
+  //console.log('Cookies:', req.cookies); // 쿠키 값 확인
+  //console.log('JWT_SECRET:', process.env.JWT_SECRET); // 환경 변수 값 확인
+  const token = req.cookies?.token;
 
-  if (!authHeader || !authHeader.startsWith("Bearer ")) {
-    return res.status(401).json({ message: "Authentication token is missing" });
+  if (!token) {
+    console.error('Token is missing.');
+    return res.status(401).json({ message: 'No token provided' });
   }
 
-  const token = authHeader.split(" ")[1];
-  try {
-    const decoded = jwt.verify(token, "secretKey");
-    req.user = decoded; // 사용자 정보를 req에 추가
-    req.token = token;  // 로그아웃 시 사용
+  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+    if (err) {
+      console.error('Token verification failed:', err);
+      return res.status(401).json({ message: 'Invalid token' });
+    }
+
+    req.user = decoded;
     next();
-  } catch (err) {
-    res.status(403).json({ message: "Invalid or expired token" });
-  }
+  });
 };
-
-module.exports = { verifyToken };

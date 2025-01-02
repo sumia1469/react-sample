@@ -19,6 +19,7 @@ const MainLayout = () => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
+          withCredentials: true,
         }
       );
 
