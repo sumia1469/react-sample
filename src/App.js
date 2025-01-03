@@ -10,8 +10,14 @@ const App = () => {
 
   useEffect(() => {
     const verifyAuth = async () => {
-      const result = await checkAuthentication();
-      setAuthState({ isAuthenticated: result.isAuthenticated, loading: false });
+      try {
+        const result = await checkAuthentication();
+        console.log("Authentication result:", result);
+        setAuthState({ isAuthenticated: result.isAuthenticated, loading: false });
+      } catch (error) {
+        console.error(error);
+        setAuthState({ isAuthenticated: false, loading: false }); // 에러 시 기본값 설정
+      }
     };
     verifyAuth();
   }, []);
