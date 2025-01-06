@@ -11,7 +11,7 @@ const LNB = ({ onMenuClick }) => {
   useEffect(() => {
     const fetchMenus = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/menu");
+        const response = await axios.get("/api/menu");
         setMenus(response.data);
       } catch (error) {
         console.error("Error fetching menus:", error);

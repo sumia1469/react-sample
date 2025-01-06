@@ -17,11 +17,11 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", formData);
+      await axios.post("/api/auth/register", formData);
       setSuccess("회원가입이 성공적으로 완료되었습니다.");
       setTimeout(() => {
         navigate("/login");
-      }, 2000);
+      }, 1000);
     } catch (err) {
       setError(err.response?.data?.message || "회원가입에 실패했습니다.");
     }

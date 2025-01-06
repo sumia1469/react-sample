@@ -1,7 +1,7 @@
 const express = require("express");
+const cors = require('cors');
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
-const cors = require("cors");
 require("dotenv").config(); // 환경 변수 로드
 const connectDB = require("./config/db"); // MongoDB 연결 함수
 const authRoutes = require("./routes/auth");
@@ -12,13 +12,13 @@ const app = express();
 // MongoDB 연결
 connectDB();
 
+app.use(cors({
+    origin: 'http://reacttest.com',
+    credentials: true,	// 이 부분이 추가된다
+}));
 // 미들웨어
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(cors({
-  origin: 'http://localhost:8081', // 프론트엔드가 호스팅되는 주소
-  credentials: true, // 쿠키를 포함한 요청을 허용
-}));
 
 // 라우트
 app.use("/api/auth", authRoutes);

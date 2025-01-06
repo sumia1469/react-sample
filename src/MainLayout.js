@@ -1,33 +1,34 @@
-import React from "react";
-import { Box, Grid } from "@mui/material";
+import React, { useContext } from "react";
+import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Body from "./components/layout/Body";
+import { AuthContext } from "./components/auth/AuthContext";
 
 const MainLayout = () => {
   const navigate = useNavigate();
+  const { setIsAuthenticated } = useContext(AuthContext); // 인증 상태 업데이트
 
   const handleLogout = async () => {
     try {
-      const token = localStorage.getItem("token");
       await axios.post(
-        "http://localhost:5000/api/auth/logout",
+        "/api/auth/logout",
         {},
         {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
           withCredentials: true,
         }
       );
 
-      localStorage.removeItem("token");
+      // 로그아웃 후 인증 상태 업데이트 및 리다이렉트
+      setIsAuthenticated(false);
       navigate("/login");
     } catch (error) {
       console.error("로그아웃 처리 중 오류:", error);
-      localStorage.removeItem("token");
+
+      // 로그아웃 실패 시에도 인증 상태 초기화
+      setIsAuthenticated(false);
       navigate("/login");
     }
   };
