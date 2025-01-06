@@ -2,6 +2,9 @@ import React, { useState, useContext, useEffect } from "react";
 import { TextField, Button, Box, Typography, Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
+import React, { useEffect,useState } from "react";
+import { TextField, Button, Box, Typography, Container, Grid } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loading from "../common/Loading";
 
@@ -16,6 +19,10 @@ const Login = () => {
             navigate("/main");
         }
     }, [isLoading, isAuthenticated, navigate]);
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
+  const [status, setStatus] = useState("");
+  const navigate = useNavigate();
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
