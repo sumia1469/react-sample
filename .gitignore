@@ -22,3 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+/nginx/1.26.1/logs
+nginx/1.26.1/logs/access.log
