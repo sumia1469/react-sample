@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -10,6 +10,7 @@ import { AuthContext } from "./components/auth/AuthContext";
 const MainLayout = () => {
   const navigate = useNavigate();
   const { setIsAuthenticated } = useContext(AuthContext); // 인증 상태 업데이트
+  const [menuData, setMenuData] = useState([]); // 메뉴 데이터를 상태로 관리
 
   const handleLogout = async () => {
     try {
@@ -33,14 +34,28 @@ const MainLayout = () => {
     }
   };
 
+  // 메뉴 데이터를 가져오는 함수
+  useEffect(() => {
+    const fetchMenuData = async () => {
+      try {
+        const response = await axios.get("/api/menus"); // 실제 API 경로
+        setMenuData(response.data); // API 응답 데이터 저장
+      } catch (error) {
+        console.error("메뉴 데이터를 가져오는 중 오류 발생:", error);
+      }
+    };
+
+    fetchMenuData();
+  }, []);
+
   return (
     <Box sx={{ height: "100vh", display: "flex", flexDirection: "column" }}>
       {/* Header */}
-      <Header onLogout={handleLogout} />
+      <Header onLogout={handleLogout} menuData={menuData} />
 
       {/* Body: Header 아래에 LNB와 MDI 배치 */}
       <Box sx={{ flexGrow: 1, display: "flex", overflow: "hidden" }}>
-        <Body />
+        <Body menuData={menuData} />
       </Box>
 
       {/* Footer */}

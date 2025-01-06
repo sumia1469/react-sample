@@ -3,7 +3,7 @@ import { Grid } from "@mui/material";
 import LNB from "./LNB";
 import MDIContents from "./MDIContents";
 
-const Body = () => {
+const Body = ({ menuData }) => {
   const [activeMenu, setActiveMenu] = useState(null);
 
   const handleMenuClick = (menu) => {
@@ -12,9 +12,12 @@ const Body = () => {
 
   return (
     <Grid container sx={{ height: "100%" }}>
+      {/* LNB: 메뉴 클릭 핸들러 전달 */}
       <Grid item>
-        <LNB onMenuClick={handleMenuClick} />
+        <LNB menus={menuData} onMenuClick={handleMenuClick} />
       </Grid>
+
+      {/* MDIContents: 활성화된 메뉴 전달 */}
       <Grid item xs>
         <MDIContents activeMenu={activeMenu} />
       </Grid>

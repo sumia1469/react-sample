@@ -1,25 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Drawer, List, ListItem, ListItemText, Collapse } from "@mui/material";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
-import axios from "axios";
 
-const LNB = ({ onMenuClick }) => {
-  const [menus, setMenus] = useState([]);
+const LNB = ({ menus, onMenuClick }) => {
   const [openItems, setOpenItems] = useState({});
-
-  // 메뉴 데이터 가져오기
-  useEffect(() => {
-    const fetchMenus = async () => {
-      try {
-        const response = await axios.get("/api/menu");
-        setMenus(response.data);
-      } catch (error) {
-        console.error("Error fetching menus:", error);
-      }
-    };
-
-    fetchMenus();
-  }, []);
 
   // 메뉴 열기/닫기 토글
   const toggleOpen = (id) => {
@@ -50,7 +34,7 @@ const LNB = ({ onMenuClick }) => {
       sx={{
         width: 240,
         flexShrink: 0,
-        [`& .MuiDrawer-paper`]: { width: 240, boxSizing: "border-box", top:"64px"},
+        [`& .MuiDrawer-paper`]: { width: 240, boxSizing: "border-box", top: "64px" },
       }}
     >
       <List>{renderMenu(menus)}</List>
