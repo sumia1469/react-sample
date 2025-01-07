@@ -38,7 +38,8 @@ const MainLayout = () => {
   useEffect(() => {
     const fetchMenuData = async () => {
       try {
-        const response = await axios.get("/api/menus"); // 실제 API 경로
+        const response = await axios.get("/api/menu"); // 실제 API 경로
+        debugger;
         setMenuData(response.data); // API 응답 데이터 저장
       } catch (error) {
         console.error("메뉴 데이터를 가져오는 중 오류 발생:", error);
