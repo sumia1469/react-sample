@@ -23,6 +23,12 @@ const LNB = ({ menus, onMenuClick }) => {
               onMenuClick(menu); // 메뉴 클릭 시 상위로 데이터 전달
             }
           }}
+          sx={{
+            cursor: "pointer", // 링크 포인터 추가
+            "&:hover": {
+              backgroundColor: "#f0f0f0", // 선택된 메뉴 배경색 (선택 사항)
+            },
+          }}
         >
           <ListItemText primary={menu.menuNm} />
           {menu.children.length > 0 && (openItems[menu.menuId] ? <ExpandLess /> : <ExpandMore />)}
