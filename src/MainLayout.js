@@ -39,7 +39,6 @@ const MainLayout = () => {
     const fetchMenuData = async () => {
       try {
         const response = await axios.get("/api/menu"); // 실제 API 경로
-        debugger;
         setMenuData(response.data); // API 응답 데이터 저장
       } catch (error) {
         console.error("메뉴 데이터를 가져오는 중 오류 발생:", error);
@@ -51,16 +50,15 @@ const MainLayout = () => {
 
   return (
     <Box sx={{ height: "100vh", display: "flex", flexDirection: "column" }}>
-      {/* Header */}
-      <Header onLogout={handleLogout} menuData={menuData} />
+        {/* Header */}
+        <Header onLogout={handleLogout} menuData={menuData} />
+        {/* Body: Header 아래에 LNB와 MDI 배치 */}
+        <Box sx={{ flexGrow: 1, display: "flex", overflow: "hidden" }}>
+          <Body menuData={menuData} />
+        </Box>
 
-      {/* Body: Header 아래에 LNB와 MDI 배치 */}
-      <Box sx={{ flexGrow: 1, display: "flex", overflow: "hidden" }}>
-        <Body menuData={menuData} />
-      </Box>
-
-      {/* Footer */}
-      <Footer />
+        {/* Footer */}
+        <Footer />
     </Box>
   );
 };

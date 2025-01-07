@@ -4,33 +4,41 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
 import axios from "axios";
 import Loading from "../common/Loading";
+import { useUser } from "../contexts/UserContext";
 
 const Login = () => {
-    const { isAuthenticated, isLoading, setIsAuthenticated } = useContext(AuthContext);
-    const navigate = useNavigate();
-    const [formData, setFormData] = useState({ email: "", password: "" });
-    const [error, setError] = useState("");
+    const { isAuthenticated, isLoading, setIsAuthenticated } = useContext(AuthContext); // 인증 상태 관리
+    const { setUser } = useUser(); // 사용자 정보 관리
+    const navigate = useNavigate(); // 페이지 이동
+    const [formData, setFormData] = useState({ email: "", password: "" }); // 폼 데이터 상태
+    const [error, setError] = useState(""); // 에러 메시지 상태
 
+    // 이미 인증된 경우 메인 페이지로 이동
     useEffect(() => {
         if (!isLoading && isAuthenticated) {
             navigate("/main");
         }
     }, [isLoading, isAuthenticated, navigate]);
 
+    // 입력값 변경 핸들러
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    // 로그인 처리 핸들러
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.post("/api/auth/login", formData, { withCredentials: true });
             if (response.status === 200) {
                 setIsAuthenticated(true); // 인증 상태 업데이트
+                const userData = response.data.user; // 서버에서 반환된 사용자 정보
+                debugger;
+                setUser({ userName: userData.name, userId: userData.id }); // 사용자 정보 설정
                 navigate("/main"); // 메인 페이지로 이동
             }
         } catch (err) {
-            setError(err.response?.data?.message || "로그인에 실패했습니다.");
+            setError(err.response?.data?.message || "로그인에 실패했습니다."); // 에러 메시지 설정
         }
     };
 
@@ -62,6 +70,7 @@ const Login = () => {
                         name="email"
                         autoComplete="email"
                         autoFocus
+                        value={formData.email}
                         onChange={handleChange}
                     />
                     <TextField
@@ -73,6 +82,7 @@ const Login = () => {
                         type="password"
                         id="password"
                         autoComplete="current-password"
+                        value={formData.password}
                         onChange={handleChange}
                     />
                     {error && <Typography color="error">{error}</Typography>}
