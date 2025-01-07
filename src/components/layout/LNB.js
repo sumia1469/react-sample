@@ -14,7 +14,16 @@ const LNB = ({ menus, onMenuClick }) => {
   const renderMenu = (items) =>
     items.map((menu) => (
       <React.Fragment key={menu.menuId}>
-        <ListItem button onClick={() => (menu.children.length ? toggleOpen(menu.menuId) : onMenuClick(menu))}>
+        <ListItem
+          button
+          onClick={() => {
+            if (menu.children.length > 0) {
+              toggleOpen(menu.menuId);
+            } else {
+              onMenuClick(menu); // 메뉴 클릭 시 상위로 데이터 전달
+            }
+          }}
+        >
           <ListItemText primary={menu.menuNm} />
           {menu.children.length > 0 && (openItems[menu.menuId] ? <ExpandLess /> : <ExpandMore />)}
         </ListItem>

@@ -7,18 +7,26 @@ const MDIContents = ({ activeMenu }) => {
   const [tabs, setTabs] = useState([{ id: "home", label: "홈", content: "홈 콘텐츠" }]);
   const [currentTab, setCurrentTab] = useState("home");
 
-  // 탭 추가
+  // 메뉴 클릭 시 탭 추가 또는 해당 탭 활성화
   useEffect(() => {
-    if (activeMenu && !tabs.some((tab) => tab.id === activeMenu.menuId)) {
-      setTabs((prevTabs) => [
-        ...prevTabs,
-        {
-          id: activeMenu.menuId,
-          label: activeMenu.menuNm,
-          content: activeMenu.srcPath || `${activeMenu.menuNm} 콘텐츠`,
-        },
-      ]);
-      setCurrentTab(activeMenu.menuId);
+    if (activeMenu) {
+      const existingTab = tabs.find((tab) => tab.id === activeMenu.menuId);
+
+      if (existingTab) {
+        // 이미 열려 있는 탭으로 이동
+        setCurrentTab(existingTab.id);
+      } else {
+        // 새 탭 추가
+        setTabs((prevTabs) => [
+          ...prevTabs,
+          {
+            id: activeMenu.menuId,
+            label: activeMenu.menuNm,
+            content: activeMenu.srcPath || `${activeMenu.menuNm} 콘텐츠`,
+          },
+        ]);
+        setCurrentTab(activeMenu.menuId);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeMenu]);
@@ -28,11 +36,15 @@ const MDIContents = ({ activeMenu }) => {
     setTabs((prevTabs) => {
       const filteredTabs = prevTabs.filter((tab) => tab.id !== id);
 
-      // 현재 탭이 닫혔다면, 다른 탭으로 이동
+      // 현재 탭이 닫힌 경우
       if (currentTab === id) {
+        // 닫힌 탭이 마지막 탭이면 이전 탭으로 이동
         if (filteredTabs.length > 0) {
-          setCurrentTab(filteredTabs[filteredTabs.length - 1].id);
+          const index = prevTabs.findIndex((tab) => tab.id === id);
+          const newCurrentTab = index > 0 ? filteredTabs[index - 1].id : filteredTabs[0].id;
+          setCurrentTab(newCurrentTab);
         } else {
+          // 모든 탭이 닫힌 경우 홈으로 이동
           setCurrentTab("home");
         }
       }
@@ -49,7 +61,6 @@ const MDIContents = ({ activeMenu }) => {
 
   return (
     <Box sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
-      {/* 탭 영역 */}
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <Tabs
           value={currentTab}
@@ -69,8 +80,8 @@ const MDIContents = ({ activeMenu }) => {
                     <IconButton
                       size="small"
                       onClick={(e) => {
-                        e.stopPropagation(); // 이벤트 전파 방지
-                        closeTab(tab.id);
+                        e.stopPropagation();
+                        closeTab(tab.id); // 탭 닫기
                       }}
                       sx={{ ml: 1 }}
                     >
@@ -82,7 +93,6 @@ const MDIContents = ({ activeMenu }) => {
             />
           ))}
         </Tabs>
-        {/* 전체 탭 닫기 버튼 */}
         <IconButton
           size="small"
           onClick={closeAllTabs}
@@ -93,7 +103,6 @@ const MDIContents = ({ activeMenu }) => {
         </IconButton>
       </Box>
 
-      {/* 콘텐츠 영역 */}
       <Box sx={{ p: 2 }}>
         {tabs.find((tab) => tab.id === currentTab)?.content || "콘텐츠 없음"}
       </Box>
