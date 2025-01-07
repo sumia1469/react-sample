@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Tabs, Tab, Box, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -7,7 +7,7 @@ const MDIContents = ({ activeMenu }) => {
   const [currentTab, setCurrentTab] = useState("home");
 
   // 탭 추가
-  React.useEffect(() => {
+  useEffect(() => {
     if (activeMenu && !tabs.some((tab) => tab.id === activeMenu.menuId)) {
       setTabs((prevTabs) => [
         ...prevTabs,
@@ -19,19 +19,25 @@ const MDIContents = ({ activeMenu }) => {
       ]);
       setCurrentTab(activeMenu.menuId);
     }
-  }, [activeMenu, tabs]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeMenu]);
 
   // 탭 닫기
   const closeTab = (id) => {
-    const filteredTabs = tabs.filter((tab) => tab.id !== id);
-    setTabs(filteredTabs);
+    setTabs((prevTabs) => {
+      const filteredTabs = prevTabs.filter((tab) => tab.id !== id);
 
-    // 현재 탭이 닫혔다면, 다른 탭으로 이동
-    if (currentTab === id && filteredTabs.length > 0) {
-      setCurrentTab(filteredTabs[filteredTabs.length - 1].id);
-    } else if (filteredTabs.length === 0) {
-      setCurrentTab("home");
-    }
+      // 현재 탭이 닫혔다면, 다른 탭으로 이동
+      if (currentTab === id) {
+        if (filteredTabs.length > 0) {
+          setCurrentTab(filteredTabs[filteredTabs.length - 1].id);
+        } else {
+          setCurrentTab("home");
+        }
+      }
+
+      return filteredTabs;
+    });
   };
 
   return (
@@ -54,7 +60,7 @@ const MDIContents = ({ activeMenu }) => {
                   <IconButton
                     size="small"
                     onClick={(e) => {
-                      e.stopPropagation();
+                      e.stopPropagation(); // 이벤트 전파 방지
                       closeTab(tab.id);
                     }}
                     sx={{ ml: 1 }}
