@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Tabs, Tab, Box, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import ClearAllIcon from "@mui/icons-material/ClearAll";
 
 const MDIContents = ({ activeMenu }) => {
   const [tabs, setTabs] = useState([{ id: "home", label: "홈", content: "홈 콘텐츠" }]);
@@ -40,39 +41,57 @@ const MDIContents = ({ activeMenu }) => {
     });
   };
 
+  // 전체 탭 닫기
+  const closeAllTabs = () => {
+    setTabs([{ id: "home", label: "홈", content: "홈 콘텐츠" }]);
+    setCurrentTab("home");
+  };
+
   return (
     <Box sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
       {/* 탭 영역 */}
-      <Tabs
-        value={currentTab}
-        onChange={(e, newValue) => setCurrentTab(newValue)}
-        variant="scrollable"
-        scrollButtons="auto"
-      >
-        {tabs.map((tab) => (
-          <Tab
-            key={tab.id}
-            value={tab.id}
-            label={
-              <Box sx={{ display: "flex", alignItems: "center" }}>
-                {tab.label}
-                {tab.id !== "home" && (
-                  <IconButton
-                    size="small"
-                    onClick={(e) => {
-                      e.stopPropagation(); // 이벤트 전파 방지
-                      closeTab(tab.id);
-                    }}
-                    sx={{ ml: 1 }}
-                  >
-                    <CloseIcon fontSize="small" />
-                  </IconButton>
-                )}
-              </Box>
-            }
-          />
-        ))}
-      </Tabs>
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Tabs
+          value={currentTab}
+          onChange={(e, newValue) => setCurrentTab(newValue)}
+          variant="scrollable"
+          scrollButtons="auto"
+          sx={{ flexGrow: 1 }}
+        >
+          {tabs.map((tab) => (
+            <Tab
+              key={tab.id}
+              value={tab.id}
+              label={
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  {tab.label}
+                  {tab.id !== "home" && (
+                    <IconButton
+                      size="small"
+                      onClick={(e) => {
+                        e.stopPropagation(); // 이벤트 전파 방지
+                        closeTab(tab.id);
+                      }}
+                      sx={{ ml: 1 }}
+                    >
+                      <CloseIcon fontSize="small" />
+                    </IconButton>
+                  )}
+                </Box>
+              }
+            />
+          ))}
+        </Tabs>
+        {/* 전체 탭 닫기 버튼 */}
+        <IconButton
+          size="small"
+          onClick={closeAllTabs}
+          sx={{ ml: 2 }}
+          title="모든 탭 닫기"
+        >
+          <ClearAllIcon fontSize="small" />
+        </IconButton>
+      </Box>
 
       {/* 콘텐츠 영역 */}
       <Box sx={{ p: 2 }}>
