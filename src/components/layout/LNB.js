@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import { Drawer, List, ListItem, ListItemText, Collapse } from "@mui/material";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 
-const LNB = ({ menus, onMenuClick }) => {
+const LNB = ({ menus, onMenuClick, isLnbOpen }) => {
   const [openItems, setOpenItems] = useState({});
 
-  // 메뉴 열기/닫기 토글
   const toggleOpen = (id) => {
     setOpenItems((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
-  // 재귀적으로 메뉴 렌더링
   const renderMenu = (items) =>
     items.map((menu) => (
       <React.Fragment key={menu.menuId}>
@@ -20,13 +18,13 @@ const LNB = ({ menus, onMenuClick }) => {
             if (menu.children.length > 0) {
               toggleOpen(menu.menuId);
             } else {
-              onMenuClick(menu); // 메뉴 클릭 시 상위로 데이터 전달
+              onMenuClick(menu);
             }
           }}
           sx={{
-            cursor: "pointer", // 링크 포인터 추가
+            cursor: "pointer",
             "&:hover": {
-              backgroundColor: "#f0f0f0", // 선택된 메뉴 배경색 (선택 사항)
+              backgroundColor: "#f0f0f0",
             },
           }}
         >
@@ -45,7 +43,8 @@ const LNB = ({ menus, onMenuClick }) => {
 
   return (
     <Drawer
-      variant="permanent"
+      variant="persistent"
+      open={isLnbOpen}
       sx={{
         width: 240,
         flexShrink: 0,

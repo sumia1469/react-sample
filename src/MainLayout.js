@@ -9,8 +9,9 @@ import { AuthContext } from "./components/auth/AuthContext";
 
 const MainLayout = () => {
   const navigate = useNavigate();
-  const { setIsAuthenticated } = useContext(AuthContext); // 인증 상태 업데이트
-  const [menuData, setMenuData] = useState([]); // 메뉴 데이터를 상태로 관리
+  const { setIsAuthenticated } = useContext(AuthContext);
+  const [menuData, setMenuData] = useState([]);
+  const [isLnbOpen, setIsLnbOpen] = useState(true);
 
   const handleLogout = async () => {
     try {
@@ -22,24 +23,24 @@ const MainLayout = () => {
         }
       );
 
-      // 로그아웃 후 인증 상태 업데이트 및 리다이렉트
       setIsAuthenticated(false);
       navigate("/login");
     } catch (error) {
       console.error("로그아웃 처리 중 오류:", error);
-
-      // 로그아웃 실패 시에도 인증 상태 초기화
       setIsAuthenticated(false);
       navigate("/login");
     }
   };
 
-  // 메뉴 데이터를 가져오는 함수
+  const toggleLnb = () => {
+    setIsLnbOpen((prev) => !prev);
+  };
+
   useEffect(() => {
     const fetchMenuData = async () => {
       try {
-        const response = await axios.get("/api/menu"); // 실제 API 경로
-        setMenuData(response.data); // API 응답 데이터 저장
+        const response = await axios.get("/api/menu");
+        setMenuData(response.data);
       } catch (error) {
         console.error("메뉴 데이터를 가져오는 중 오류 발생:", error);
       }
@@ -50,15 +51,11 @@ const MainLayout = () => {
 
   return (
     <Box sx={{ height: "100vh", display: "flex", flexDirection: "column" }}>
-        {/* Header */}
-        <Header onLogout={handleLogout} menuData={menuData} />
-        {/* Body: Header 아래에 LNB와 MDI 배치 */}
-        <Box sx={{ flexGrow: 1, display: "flex", overflow: "hidden" }}>
-          <Body menuData={menuData} />
-        </Box>
-
-        {/* Footer */}
-        <Footer />
+      <Header onLogout={handleLogout} menuData={menuData} toggleLnb={toggleLnb} />
+      <Box sx={{ flexGrow: 1, display: "flex", overflow: "hidden" }}>
+        <Body menuData={menuData} isLnbOpen={isLnbOpen} />
+      </Box>
+      <Footer />
     </Box>
   );
 };

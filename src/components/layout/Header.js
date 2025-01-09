@@ -70,7 +70,7 @@ const Header = ({ onLogout, menuData, userName, userId, onThemeChange }) => {
                 handleDialogClose();
               }}
             >
-              Dark Mode
+              Dark Modeㅋ
             </Button>
           </Box>
         </DialogContent>
