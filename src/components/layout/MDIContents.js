@@ -22,7 +22,7 @@ const MDIContents = ({ activeMenu }) => {
           {
             id: activeMenu.menuId,
             label: activeMenu.menuNm,
-            content: activeMenu.srcPath || `${activeMenu.menuNm} 콘텐츠`,
+            content: <DynamicComponentLoader srcPath={activeMenu.srcPath} />, // 동적 컴포넌트 로드
           },
         ]);
         setCurrentTab(activeMenu.menuId);
@@ -107,6 +107,35 @@ const MDIContents = ({ activeMenu }) => {
         {tabs.find((tab) => tab.id === currentTab)?.content || "콘텐츠 없음"}
       </Box>
     </Box>
+  );
+};
+
+const DynamicComponentLoader = ({ srcPath }) => {
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    setHasError(false); // Reset error state on srcPath change
+  }, [srcPath]);
+
+  if (!srcPath) {
+    console.error("srcPath is undefined");
+    return <div>Invalid path</div>;
+  }
+
+  const adjustedSrcPath = srcPath.replace(/^\//, ''); // 경로 조정
+
+  const Component = React.lazy(() =>
+    import(`../../${adjustedSrcPath}`).catch((error) => {
+      console.error(`Error loading component at path: ${adjustedSrcPath}`, error);
+      setHasError(true);
+      return { default: () => <div>페이지가 없습니다</div> };
+    })
+  );
+
+  return (
+    <React.Suspense fallback={<div>Loading...</div>}>
+      {hasError ? <div>페이지가 없습니다</div> : <Component />}
+    </React.Suspense>
   );
 };
 

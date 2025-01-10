@@ -9,18 +9,20 @@ const LNB = ({ menus, onMenuClick, isLnbOpen }) => {
     setOpenItems((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
+  const handleMenuClick = (menu) => {
+    if (menu.children.length > 0) {
+      toggleOpen(menu.menuId);
+    } else {
+      onMenuClick(menu);
+    }
+  };
+
   const renderMenu = (items) =>
     items.map((menu) => (
       <React.Fragment key={menu.menuId}>
         <ListItem
           button
-          onClick={() => {
-            if (menu.children.length > 0) {
-              toggleOpen(menu.menuId);
-            } else {
-              onMenuClick(menu);
-            }
-          }}
+          onClick={() => handleMenuClick(menu)}
           sx={{
             cursor: "pointer",
             "&:hover": {
