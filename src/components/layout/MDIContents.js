@@ -22,7 +22,7 @@ const MDIContents = ({ activeMenu }) => {
           {
             id: activeMenu.menuId,
             label: activeMenu.menuNm,
-            content: <DynamicComponentLoader srcPath={activeMenu.srcPath} />, // 동적 컴포넌트 로드
+            content: <DynamicComponentLoader srcPath={activeMenu.srcPath} menuId={activeMenu.menuId} />, // 동적 컴포넌트 로드 및 메뉴 ID 전달
           },
         ]);
         setCurrentTab(activeMenu.menuId);
@@ -110,7 +110,7 @@ const MDIContents = ({ activeMenu }) => {
   );
 };
 
-const DynamicComponentLoader = ({ srcPath }) => {
+const DynamicComponentLoader = ({ srcPath, menuId }) => {
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
@@ -134,7 +134,7 @@ const DynamicComponentLoader = ({ srcPath }) => {
 
   return (
     <React.Suspense fallback={<div>Loading...</div>}>
-      {hasError ? <div>페이지가 없습니다</div> : <Component />}
+      {hasError ? <div>페이지가 없습니다</div> : <Component menuId={menuId} />}
     </React.Suspense>
   );
 };

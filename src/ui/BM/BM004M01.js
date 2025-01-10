@@ -4,18 +4,15 @@ import { Add, Edit, Delete } from "@mui/icons-material";
 import axios from "axios";
 import TitleBar from "../../components/common/TitleBar"; // TitleBar 컴포넌트 임포트
 
-const BM004M01 = () => {
+const BM004M01 = ({ menuId }) => {
   const [menus, setMenus] = useState([]);
   const [newMenu, setNewMenu] = useState({ menuId: "", menuNm: "", menuLvl: 1, topMenuId: "" });
-  const [isFavorite, setIsFavorite] = useState(false);
-  const [breadcrumb, setBreadcrumb] = useState("");
 
   useEffect(() => {
     const fetchMenus = async () => {
       try {
         const response = await axios.get("/api/menu");
         setMenus(response.data);
-        generateBreadcrumb(response.data, "001001004"); // 메뉴 ID를 사용하여 경로 생성
       } catch (error) {
         console.error("메뉴 데이터를 가져오는 중 오류 발생:", error);
       }
@@ -23,33 +20,6 @@ const BM004M01 = () => {
 
     fetchMenus();
   }, []);
-
-  const findMenuById = (menus, menuId) => {
-    for (const menu of menus) {
-      if (menu.menuId === menuId) {
-        return menu;
-      }
-      if (menu.children) {
-        const found = findMenuById(menu.children, menuId);
-        if (found) {
-          return found;
-        }
-      }
-    }
-    return null;
-  };
-
-  const generateBreadcrumb = (menus, menuId) => {
-    const path = [];
-    let currentMenu = findMenuById(menus, menuId);
-
-    while (currentMenu) {
-      path.unshift(currentMenu.menuNm);
-      currentMenu = findMenuById(menus, currentMenu.topMenuId);
-    }
-
-    setBreadcrumb(path.join(" > "));
-  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -75,23 +45,9 @@ const BM004M01 = () => {
     }
   };
 
-  const handleRefresh = () => {
-    // 새로고침 로직
-  };
-
-  const toggleFavorite = () => {
-    setIsFavorite((prev) => !prev);
-  };
-
   return (
     <Box sx={{ padding: 2 }}>
-      <TitleBar
-        title="메뉴 관리"
-        breadcrumb={breadcrumb}
-        isFavorite={isFavorite}
-        toggleFavorite={toggleFavorite}
-        handleRefresh={handleRefresh}
-      />
+      <TitleBar title="메뉴 관리" menuId={menuId} />
       <Box sx={{ display: "flex", gap: 2, marginBottom: 2 }}>
         <TextField label="메뉴 ID" name="menuId" value={newMenu.menuId} onChange={handleInputChange} />
         <TextField label="메뉴 이름" name="menuNm" value={newMenu.menuNm} onChange={handleInputChange} />
