@@ -5,7 +5,7 @@
   "program_cd": "BM001M01",
   "program_nm": "코드관리",
   "program_group_cd": "BM",
-  "src_path": "/ui/BM/BM001M01.xml",
+  "src_path": "/ui/BM/BM001M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -16,7 +16,7 @@
   "program_cd": "BM002M01",
   "program_nm": "권한관리",
   "program_group_cd": "BM",
-  "src_path": "/ui/BM/BM002M01.xml",
+  "src_path": "/ui/BM/BM002M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -27,7 +27,7 @@
   "program_cd": "BM003M01",
   "program_nm": "프로그램관리",
   "program_group_cd": "BM",
-  "src_path": "/ui/BM/BM003M01.xml",
+  "src_path": "/ui/BM/BM003M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -38,7 +38,7 @@
   "program_cd": "BM004M01",
   "program_nm": "메뉴관리",
   "program_group_cd": "BM",
-  "src_path": "/ui/BM/BM004M01.xml",
+  "src_path": "/ui/BM/BM004M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -49,7 +49,7 @@
   "program_cd": "BM005M01",
   "program_nm": "릴리즈관리",
   "program_group_cd": "BM",
-  "src_path": "/ui/BM/BM005M01.xml",
+  "src_path": "/ui/BM/BM005M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -60,7 +60,7 @@
   "program_cd": "BM006M01",
   "program_nm": "파일그룹관리",
   "program_group_cd": "BM",
-  "src_path": "/ui/BM/BM006M01.xml",
+  "src_path": "/ui/BM/BM006M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -71,7 +71,7 @@
   "program_cd": "BM007M01",
   "program_nm": "단축키관리",
   "program_group_cd": "BM",
-  "src_path": "/ui/BM/BM007M01.xml",
+  "src_path": "/ui/BM/BM007M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -82,7 +82,7 @@
   "program_cd": "BM008M01",
   "program_nm": "다국어 메시지 관리",
   "program_group_cd": "BM",
-  "src_path": "/ui/BM/BM008M01.xml",
+  "src_path": "/ui/BM/BM008M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -93,7 +93,7 @@
   "program_cd": "BM009M01",
   "program_nm": "공휴일 관리",
   "program_group_cd": "BM",
-  "src_path": "/ui/BM/BM009M01.xml",
+  "src_path": "/ui/BM/BM009M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -104,7 +104,7 @@
   "program_cd": "BM010M01",
   "program_nm": "계정관리",
   "program_group_cd": "BM",
-  "src_path": "/ui/BM/BM010M01.xml",
+  "src_path": "/ui/BM/BM010M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -115,7 +115,7 @@
   "program_cd": "HM001M01",
   "program_nm": "조직관리",
   "program_group_cd": "HM",
-  "src_path": "/ui/HM/HM001M01.xml",
+  "src_path": "/ui/HM/HM001M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -126,7 +126,7 @@
   "program_cd": "HM002M01",
   "program_nm": "사원관리",
   "program_group_cd": "HM",
-  "src_path": "/ui/HM/HM002M01.xml",
+  "src_path": "/ui/HM/HM002M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -137,7 +137,7 @@
   "program_cd": "HM003M01",
   "program_nm": "사원정보",
   "program_group_cd": "HM",
-  "src_path": "/ui/HM/HM003M01.xml",
+  "src_path": "/ui/HM/HM003M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -148,7 +148,7 @@
   "program_cd": "HM004M01",
   "program_nm": "일정관리",
   "program_group_cd": "HM",
-  "src_path": "/ui/HM/HM004M01.xml",
+  "src_path": "/ui/HM/HM004M01.js",
   "is_use": "Y",
   "note": "NULL"
 },
@@ -159,7 +159,7 @@
   "program_cd": "SP001M01",
   "program_nm": "샘플화면",
   "program_group_cd": "SP",
-  "src_path": "/ui/SP/SP001M01.xml",
+  "src_path": "/ui/SP/SP001M01.js",
   "is_use": "Y",
   "note": "NULL"
 }]
