@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Typography, TextField, Table, TableBody, TableCell, TableHead, TableRow, IconButton } from "@mui/material";
+import { Box, TextField, Button, Table, TableHead, TableRow, TableCell, TableBody, IconButton } from "@mui/material";
 import { Add, Edit, Delete } from "@mui/icons-material";
 import axios from "axios";
+import TitleBar from "../../components/common/TitleBar"; // TitleBar 컴포넌트 임포트
 
-const MenuManagement = () => {
+const BM004M01 = () => {
   const [menus, setMenus] = useState([]);
-  const [newMenu, setNewMenu] = useState({ menuId: "", menuNm: "", menuLvl: 1, topMenuId: "000000000" });
+  const [newMenu, setNewMenu] = useState({ menuId: "", menuNm: "", menuLvl: 1, topMenuId: "" });
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [breadcrumb, setBreadcrumb] = useState("");
 
   useEffect(() => {
     const fetchMenus = async () => {
       try {
         const response = await axios.get("/api/menu");
         setMenus(response.data);
+        generateBreadcrumb(response.data, "001001004"); // 메뉴 ID를 사용하여 경로 생성
       } catch (error) {
         console.error("메뉴 데이터를 가져오는 중 오류 발생:", error);
       }
@@ -20,16 +24,43 @@ const MenuManagement = () => {
     fetchMenus();
   }, []);
 
+  const findMenuById = (menus, menuId) => {
+    for (const menu of menus) {
+      if (menu.menuId === menuId) {
+        return menu;
+      }
+      if (menu.children) {
+        const found = findMenuById(menu.children, menuId);
+        if (found) {
+          return found;
+        }
+      }
+    }
+    return null;
+  };
+
+  const generateBreadcrumb = (menus, menuId) => {
+    const path = [];
+    let currentMenu = findMenuById(menus, menuId);
+
+    while (currentMenu) {
+      path.unshift(currentMenu.menuNm);
+      currentMenu = findMenuById(menus, currentMenu.topMenuId);
+    }
+
+    setBreadcrumb(path.join(" > "));
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setNewMenu({ ...newMenu, [name]: value });
+    setNewMenu((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleAddMenu = async () => {
     try {
       const response = await axios.post("/api/menu", newMenu);
       setMenus([...menus, response.data.menu]);
-      setNewMenu({ menuId: "", menuNm: "", menuLvl: 1, topMenuId: "000000000" });
+      setNewMenu({ menuId: "", menuNm: "", menuLvl: 1, topMenuId: "" });
     } catch (error) {
       console.error("메뉴 추가 중 오류 발생:", error);
     }
@@ -44,11 +75,23 @@ const MenuManagement = () => {
     }
   };
 
+  const handleRefresh = () => {
+    // 새로고침 로직
+  };
+
+  const toggleFavorite = () => {
+    setIsFavorite((prev) => !prev);
+  };
+
   return (
     <Box sx={{ padding: 2 }}>
-      <Typography variant="h4" gutterBottom>
-        메뉴 관리
-      </Typography>
+      <TitleBar
+        title="메뉴 관리"
+        breadcrumb={breadcrumb}
+        isFavorite={isFavorite}
+        toggleFavorite={toggleFavorite}
+        handleRefresh={handleRefresh}
+      />
       <Box sx={{ display: "flex", gap: 2, marginBottom: 2 }}>
         <TextField label="메뉴 ID" name="menuId" value={newMenu.menuId} onChange={handleInputChange} />
         <TextField label="메뉴 이름" name="menuNm" value={newMenu.menuNm} onChange={handleInputChange} />
@@ -91,4 +134,4 @@ const MenuManagement = () => {
   );
 };
 
-export default MenuManagement;
+export default BM004M01;
