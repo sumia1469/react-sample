@@ -24,7 +24,7 @@ const Body = ({ menuData, isLnbOpen }) => {
             overflow: 'hidden'
           }}
         >
-          <MDIContents activeMenu={activeMenu} />
+          <MDIContents activeMenu={activeMenu}/>
         </Box>
       </Grid>
     </Grid>

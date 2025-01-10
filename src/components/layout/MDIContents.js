@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Tabs, Tab, Box, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import ClearAllIcon from "@mui/icons-material/ClearAll";
+import DynamicComponentLoader from "./DynamicComponentLoader";
 
 const MDIContents = ({ activeMenu }) => {
   const [tabs, setTabs] = useState([{ id: "home", label: "홈", content: "홈 콘텐츠" }]);
@@ -22,7 +23,7 @@ const MDIContents = ({ activeMenu }) => {
           {
             id: activeMenu.menuId,
             label: activeMenu.menuNm,
-            content: <DynamicComponentLoader srcPath={activeMenu.srcPath} menuId={activeMenu.menuId} />, // 동적 컴포넌트 로드 및 메뉴 ID 전달
+            content: <DynamicComponentLoader srcPath={activeMenu.srcPath} menuId={activeMenu.menuId} onRefresh={refreshTab}/>, // 동적 컴포넌트 로드 및 메뉴 ID 전달
           },
         ]);
         setCurrentTab(activeMenu.menuId);
@@ -57,6 +58,22 @@ const MDIContents = ({ activeMenu }) => {
   const closeAllTabs = () => {
     setTabs([{ id: "home", label: "홈", content: "홈 콘텐츠" }]);
     setCurrentTab("home");
+  };
+
+  // 새로고침
+  const refreshTab = (id) => {
+    setTabs((prevTabs) => {
+      const updatedTabs = prevTabs.map((tab) => {
+        if (tab.id === id) {
+          return {
+            ...tab,
+            content: <DynamicComponentLoader srcPath={activeMenu.srcPath} menuId={activeMenu.menuId} key={Date.now()} onRefresh={refreshTab}/>, // 새로고침 시 컴포넌트 다시 로드
+          };
+        }
+        return tab;
+      });
+      return updatedTabs;
+    });
   };
 
   return (
@@ -107,35 +124,6 @@ const MDIContents = ({ activeMenu }) => {
         {tabs.find((tab) => tab.id === currentTab)?.content || "콘텐츠 없음"}
       </Box>
     </Box>
-  );
-};
-
-const DynamicComponentLoader = ({ srcPath, menuId }) => {
-  const [hasError, setHasError] = useState(false);
-
-  useEffect(() => {
-    setHasError(false); // Reset error state on srcPath change
-  }, [srcPath]);
-
-  if (!srcPath) {
-    console.error("srcPath is undefined");
-    return <div>Invalid path</div>;
-  }
-
-  const adjustedSrcPath = srcPath.replace(/^\//, ''); // 경로 조정
-
-  const Component = React.lazy(() =>
-    import(`../../${adjustedSrcPath}`).catch((error) => {
-      console.error(`Error loading component at path: ${adjustedSrcPath}`, error);
-      setHasError(true);
-      return { default: () => <div>페이지가 없습니다</div> };
-    })
-  );
-
-  return (
-    <React.Suspense fallback={<div>Loading...</div>}>
-      {hasError ? <div>페이지가 없습니다</div> : <Component menuId={menuId} />}
-    </React.Suspense>
   );
 };
 

@@ -4,20 +4,20 @@ import { Add, Edit, Delete } from "@mui/icons-material";
 import axios from "axios";
 import TitleBar from "../../components/common/TitleBar"; // TitleBar 컴포넌트 임포트
 
-const BM004M01 = ({ menuId }) => {
+const BM004M01 = ({ menuId, onRefresh }) => {
   const [menus, setMenus] = useState([]);
   const [newMenu, setNewMenu] = useState({ menuId: "", menuNm: "", menuLvl: 1, topMenuId: "" });
 
-  useEffect(() => {
-    const fetchMenus = async () => {
-      try {
-        const response = await axios.get("/api/menu");
-        setMenus(response.data);
-      } catch (error) {
-        console.error("메뉴 데이터를 가져오는 중 오류 발생:", error);
-      }
-    };
+  const fetchMenus = async () => {
+    try {
+      const response = await axios.get("/api/menu");
+      setMenus(response.data);
+    } catch (error) {
+      console.error("메뉴 데이터를 가져오는 중 오류 발생:", error);
+    }
+  };
 
+  useEffect(() => {
     fetchMenus();
   }, []);
 
@@ -47,7 +47,7 @@ const BM004M01 = ({ menuId }) => {
 
   return (
     <Box sx={{ padding: 2 }}>
-      <TitleBar title="메뉴 관리" menuId={menuId} />
+      <TitleBar title="메뉴 관리" menuId={menuId} onRefresh={onRefresh}/>
       <Box sx={{ display: "flex", gap: 2, marginBottom: 2 }}>
         <TextField label="메뉴 ID" name="menuId" value={newMenu.menuId} onChange={handleInputChange} />
         <TextField label="메뉴 이름" name="menuNm" value={newMenu.menuNm} onChange={handleInputChange} />

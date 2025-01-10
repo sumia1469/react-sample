@@ -3,7 +3,7 @@ import { Box, Typography, IconButton } from "@mui/material";
 import { Star, StarBorder, Refresh } from "@mui/icons-material";
 import axios from "axios";
 
-const TitleBar = ({ title, menuId, isFavorite, toggleFavorite, handleRefresh }) => {
+const TitleBar = ({ title, menuId, isFavorite, toggleFavorite, onRefresh }) => {
   const [breadcrumb, setBreadcrumb] = useState("");
   const [menus, setMenus] = useState([]);
 
@@ -53,6 +53,12 @@ const TitleBar = ({ title, menuId, isFavorite, toggleFavorite, handleRefresh }) 
     }
   }, [menus, menuId]);
 
+  const handleRefreshClick = () => {
+    if (onRefresh) {
+      onRefresh(menuId);
+    }
+  };
+
   return (
     <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 2 }}>
       <Typography variant="h4">{title}</Typography>
@@ -61,7 +67,7 @@ const TitleBar = ({ title, menuId, isFavorite, toggleFavorite, handleRefresh }) 
         <IconButton onClick={toggleFavorite} color="primary">
           {isFavorite ? <Star /> : <StarBorder />}
         </IconButton>
-        <IconButton onClick={handleRefresh} color="primary">
+        <IconButton onClick={handleRefreshClick} color="primary">
           <Refresh />
         </IconButton>
       </Box>
