@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, Typography, Button, Box, Dialog, DialogTitle, DialogContent, DialogActions } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Box, Dialog, DialogTitle, DialogContent, DialogActions, IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useUser } from "../contexts/UserContext";
 
-const Header = ({ onLogout, menuData, userName, userId, onThemeChange }) => {
+const Header = ({ onLogout, menuData, toggleLnb, onThemeChange }) => {
   const { user } = useUser();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const topLevelMenus = menuData?.filter((menu) => menu.menuLvl === 1) || [];
@@ -19,20 +20,20 @@ const Header = ({ onLogout, menuData, userName, userId, onThemeChange }) => {
     <>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            My Application
-          </Typography>
-          {/* 메뉴 버튼 - 좌측 정렬 */}
-          <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
+          <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleLnb}>
+            <MenuIcon />
+          </IconButton>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Typography variant="h6" sx={{ marginRight: 2 }}>
+              My Application
+            </Typography>
             {topLevelMenus.map((menu) => (
               <Button key={menu.menuId} color="inherit">
                 {menu.menuNm}
               </Button>
             ))}
           </Box>
-
-          {/* 사용자 정보 및 설정 버튼 - 우측 정렬 */}
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box sx={{ display: "flex", alignItems: "center", marginLeft: "auto" }}>
             <Typography variant="body1" sx={{ marginRight: 2 }}>
               {user.userName} ({user.userId})
             </Typography>
@@ -46,7 +47,6 @@ const Header = ({ onLogout, menuData, userName, userId, onThemeChange }) => {
         </Toolbar>
       </AppBar>
 
-      {/* 설정 다이얼로그 */}
       <Dialog open={isDialogOpen} onClose={handleDialogClose}>
         <DialogTitle>설정</DialogTitle>
         <DialogContent>
@@ -70,7 +70,7 @@ const Header = ({ onLogout, menuData, userName, userId, onThemeChange }) => {
                 handleDialogClose();
               }}
             >
-              Dark Modeㅋ
+              Dark Mode
             </Button>
           </Box>
         </DialogContent>

@@ -46,7 +46,8 @@ const LNB = ({ menus, onMenuClick, isLnbOpen }) => {
       variant="persistent"
       open={isLnbOpen}
       sx={{
-        width: 240,
+        width: isLnbOpen ? 240 : 0, // LNB가 열리고 닫힐 때 너비 조절
+        transition: 'width 0.3s', // 애니메이션 효과 추가
         flexShrink: 0,
         [`& .MuiDrawer-paper`]: { width: 240, boxSizing: "border-box", top: "64px" },
       }}
